@@ -23,26 +23,59 @@
         }
 
         .container {
-        background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
-        border-radius: 15px; /* Bordes redondeados */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
-        backdrop-filter: blur(10px); /* Efecto blur */
-        border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
-        padding: 20px;
-        max-width: 400px;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-        .container img {
-            width: 200px;
+            background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+            backdrop-filter: blur(10px); /* Efecto blur */
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .container p {
-            font-size: 16px;
-            color: #000000;
+        /* Definir animación fadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px); /* Desplazamiento inicial hacia abajo */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Posición original */
+            }
+        }
+
+        /* Animación para el logo */
+        .container img {
+            width: 200px;
             margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out; /* Aparecerá en 1 segundo */
+        }
+
+        /* Animación para los cuadros con información */
+        .container p,
+        .price-options div,
+        .cta-button {
+            animation: fadeIn 1.5s ease-in-out; /* Aparecerán en 1.5 segundos */
+            opacity: 0; /* Inicia invisible */
+            animation-fill-mode: forwards; /* Mantiene el estado final de la animación */
+        }
+
+        .price-options div {
+            animation-delay: 0.5s; /* Añadir un pequeño retraso para el efecto */
+        }
+
+        .cta-button {
+            animation-delay: 1s; /* Retraso para que el botón aparezca después */
+        }
+
+        /* Animación para la sección "¿Quiénes somos?" */
+        .quienes-somos {
+            animation: fadeIn 2s ease-in-out; /* Aparecerá en 2 segundos */
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s; /* Aparece después de los otros elementos */
         }
 
         .price-options {
@@ -126,34 +159,33 @@
 
         /* Sección ¿Quiénes somos? */
         .quienes-somos {
-        text-align: center;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        padding: 20px;
-        background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
-        border-radius: 15px; /* Bordes redondeados */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
-        backdrop-filter: blur(10px); /* Efecto blur */
-        border: 1px solid rgba(255, 255, 255, 0.5); /* Bordes ligeros */
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+            backdrop-filter: blur(10px); /* Efecto blur */
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Bordes ligeros */
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .quienes-somos h2 {
-        font-size: 28px;
-        color: #ff9900;
-        margin-bottom: 20px;
-    }
+        .quienes-somos h2 {
+            font-size: 28px;
+            color: #ff9900;
+            margin-bottom: 20px;
+        }
 
-    .quienes-somos p {
-        font-size: 16px;
-        color: #000000;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
+        .quienes-somos p {
+            font-size: 16px;
+            color: #000000;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
 
         /* Footer */
         footer {

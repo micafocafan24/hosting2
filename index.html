@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accede a torneos esports, grandes premios y juegos ilimitados con un plan de nutrición personalizado.">
+    <title>Zanafit - Acceso a esports y nutrición personalizada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('posiblefondo.jpg'); /* Imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para que cubra toda la página */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Fija la imagen para que no se mueva al hacer scroll */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+        background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+        border-radius: 15px; /* Bordes redondeados */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra */
+        backdrop-filter: blur(10px); /* Efecto blur */
+        border: 1px solid rgba(255, 255, 255, 0.5); /* Borde semitransparente */
+        padding: 20px;
+        max-width: 400px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .container img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .price-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .price-options div {
+            background-color: #e68a00;
+            padding: 10px;
+            border-radius: 5px;
+            width: 43%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-options div h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .price-options div p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        .cta-button {
+            background-color: #ff9900;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e68a00;
+        }
+
+        .info {
+            font-size: 14px;
+            color: #000000;
+            margin-top: 15px;
+        }
+
+        .info a {
+            color: #ff9900;
+            text-decoration: none;
+        }
+
+        /* Drop-down oculto por defecto */
+        .dropdown {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .dropdown input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        .dropdown button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown button:hover {
+            background-color: #e68a00;
+        }
+
+        /* Sección ¿Quiénes somos? */
+        .quienes-somos {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.3); /* Fondo semitransparente */
+        border-radius: 15px; /* Bordes redondeados */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra del cuadro */
+        backdrop-filter: blur(10px); /* Efecto blur */
+        border: 1px solid rgba(255, 255, 255, 0.5); /* Bordes ligeros */
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quienes-somos h2 {
+        font-size: 28px;
+        color: #ff9900;
+        margin-bottom: 20px;
+    }
+
+    .quienes-somos p {
+        font-size: 16px;
+        color: #000000;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+
+        /* Footer */
+        footer {
+            background-color: #ff9900;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        footer h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+
+            .price-options {
+                flex-direction: column;
+            }
+
+            .price-options div {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .quienes-somos p {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo.png" alt="Zanafit Logo">
+        <p>Tu acceso a torneos esports, grandes premios y juegos ilimitados. Además, disfruta de un plan de nutrición personalizado.</p>
+
+        <div class="price-options">
+            <div>
+                <h3>Postpago</h3>
+                <p>$4.990 / Mes</p>
+            </div>
+            <div>
+                <h3>Prepago</h3>
+                <p>$1.200 / Semana</p>
+            </div>
+        </div>
+
+        <button class="cta-button" id="cta-button">¡Suscríbete ahora!</button>
+
+        <!-- Dropdown para ingresar el número de teléfono -->
+        <div class="dropdown" id="dropdown">
+            <p>Ingresa tu número de teléfono para confirmar:</p>
+            <input type="text" placeholder="Tu número de teléfono" id="telefono">
+            <button onclick="confirmarSuscripcion()">Confirmar</button>
+        </div>
+
+        <p class="info">Accede a rutinas y un plan de nutrición personalizado. 
+           <a href="https://zanafit.com/" target="_blank">Más información</a>
+        </p>
+    </div>
+
+    <!-- Sección "¿Quiénes somos?" -->
+    <div class="quienes-somos">
+        <h2>¿Quiénes somos?</h2>
+        <p>ZanaFit es una plataforma que te permite obtener planes de entrenamientos personalizados de distintas disciplinas, de acuerdo a tus objetivos, realizados por los mejores coaches de Latinoamérica.</p>
+        <p>Con la App ZanaFit puedes ejercitarte sin la necesidad de moverte de casa y en el horario que estimes conveniente ¡Ponte en forma cuando y donde quieras! Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Contáctanos</h3>
+        <p>soporte@zanafit.com</p>
+    </footer>
+
+    <script>
+        // Función para mostrar el dropdown al hacer clic en el botón
+        document.getElementById('cta-button').addEventListener('click', function () {
+            var dropdown = document.getElementById('dropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Función para confirmar la suscripción
+        function confirmarSuscripcion() {
+            var telefono = document.getElementById('telefono').value;
+            if (telefono) {
+                alert('Número de teléfono ' + telefono + ' registrado correctamente. ¡Gracias por suscribirte!');
+                // Aquí puedes añadir lógica para enviar el número a un servidor o realizar otras acciones
+            } else {
+                alert('Por favor, ingresa un número de teléfono válido.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

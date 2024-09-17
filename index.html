@@ -71,6 +71,14 @@
             animation-delay: 1s; /* Retraso para que el botón aparezca después */
         }
 
+        /* Animación para la sección "¿Quiénes somos?" */
+        .quienes-somos {
+            animation: fadeIn 2s ease-in-out; /* Aparecerá en 2 segundos */
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s; /* Aparece después de los otros elementos */
+        }
+
         .price-options {
             display: flex;
             justify-content: space-around;
@@ -150,12 +158,9 @@
             background-color: #e68a00;
         }
 
-        /* Información debajo de "¿Quiénes somos?" oculta inicialmente */
-        .quienes-somos-content {
-            display: none; /* Oculto por defecto */
-        }
-
+        /* Sección ¿Quiénes somos? */
         .quienes-somos {
+            text-align: center;
             margin-top: 40px;
             margin-bottom: 40px;
             padding: 20px;
@@ -173,7 +178,6 @@
             font-size: 28px;
             color: #ff9900;
             margin-bottom: 20px;
-            cursor: pointer;
         }
 
         .quienes-somos p {
@@ -259,10 +263,9 @@
 
     <!-- Sección "¿Quiénes somos?" -->
     <div class="quienes-somos">
-        <h2 onclick="toggleQuienesSomos()">¿Quiénes somos?</h2>
-        <div class="quienes-somos-content" id="quienes-somos-content">
-            <p>ZanaFit es una plataforma que ofrece acceso a torneos de esports, juegos ilimitados, y programas de nutrición personalizados. Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
-        </div>
+        <h2>¿Quiénes somos?</h2>
+        <p>ZanaFit es una plataforma que te permite obtener planes de entrenamientos personalizados de distintas disciplinas, de acuerdo a tus objetivos, realizados por los mejores coaches de Latinoamérica.</p>
+        <p>Con la App ZanaFit puedes ejercitarte sin la necesidad de moverte de casa y en el horario que estimes conveniente ¡Ponte en forma cuando y donde quieras! Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
     </div>
 
     <!-- Footer -->
@@ -288,12 +291,6 @@
             } else {
                 alert('Por favor, ingresa un número de teléfono válido.');
             }
-        }
-
-        // Función para mostrar/ocultar la información de "¿Quiénes somos?"
-        function toggleQuienesSomos() {
-            var quienesSomosContent = document.getElementById('quienes-somos-content');
-            quienesSomosContent.style.display = quienesSomosContent.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 

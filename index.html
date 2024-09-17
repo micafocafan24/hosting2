@@ -150,9 +150,12 @@
             background-color: #e68a00;
         }
 
-        /* Sección ¿Quiénes somos? oculta inicialmente */
-        .quienes-somos {
+        /* Información debajo de "¿Quiénes somos?" oculta inicialmente */
+        .quienes-somos-content {
             display: none; /* Oculto por defecto */
+        }
+
+        .quienes-somos {
             margin-top: 40px;
             margin-bottom: 40px;
             padding: 20px;
@@ -255,10 +258,11 @@
     </div>
 
     <!-- Sección "¿Quiénes somos?" -->
-    <div class="quienes-somos" id="quienes-somos">
+    <div class="quienes-somos">
         <h2 onclick="toggleQuienesSomos()">¿Quiénes somos?</h2>
-        <p>ZanaFit es una plataforma que te permite obtener planes de entrenamientos personalizados de distintas disciplinas, de acuerdo a tus objetivos, realizados por los mejores coaches de Latinoamérica.</p>
-        <p>Con la App ZanaFit puedes ejercitarte sin la necesidad de moverte de casa y en el horario que estimes conveniente ¡Ponte en forma cuando y donde quieras! Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
+        <div class="quienes-somos-content" id="quienes-somos-content">
+            <p>ZanaFit es una plataforma que ofrece acceso a torneos de esports, juegos ilimitados, y programas de nutrición personalizados. Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -286,14 +290,10 @@
             }
         }
 
-        // Función para mostrar/ocultar la sección "¿Quiénes somos?"
+        // Función para mostrar/ocultar la información de "¿Quiénes somos?"
         function toggleQuienesSomos() {
-            var quienesSomos = document.getElementById('quienes-somos');
-            if (quienesSomos.style.display === "none" || quienesSomos.style.display === "") {
-                quienesSomos.style.display = "block";
-            } else {
-                quienesSomos.style.display = "none";
-            }
+            var quienesSomosContent = document.getElementById('quienes-somos-content');
+            quienesSomosContent.style.display = quienesSomosContent.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 

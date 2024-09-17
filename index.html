@@ -71,6 +71,14 @@
             animation-delay: 1s; /* Retraso para que el botón aparezca después */
         }
 
+        /* Animación para la sección "¿Quiénes somos?" */
+        .quienes-somos {
+            animation: fadeIn 2s ease-in-out; /* Aparecerá en 2 segundos */
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s; /* Aparece después de los otros elementos */
+        }
+
         .price-options {
             display: flex;
             justify-content: space-around;
@@ -150,9 +158,9 @@
             background-color: #e68a00;
         }
 
-        /* Sección ¿Quiénes somos? oculta inicialmente */
+        /* Sección ¿Quiénes somos? */
         .quienes-somos {
-            display: none; /* Oculto por defecto */
+            text-align: center;
             margin-top: 40px;
             margin-bottom: 40px;
             padding: 20px;
@@ -170,7 +178,6 @@
             font-size: 28px;
             color: #ff9900;
             margin-bottom: 20px;
-            cursor: pointer;
         }
 
         .quienes-somos p {
@@ -255,8 +262,8 @@
     </div>
 
     <!-- Sección "¿Quiénes somos?" -->
-    <div class="quienes-somos" id="quienes-somos">
-        <h2 onclick="toggleQuienesSomos()">¿Quiénes somos?</h2>
+    <div class="quienes-somos">
+        <h2>¿Quiénes somos?</h2>
         <p>ZanaFit es una plataforma que te permite obtener planes de entrenamientos personalizados de distintas disciplinas, de acuerdo a tus objetivos, realizados por los mejores coaches de Latinoamérica.</p>
         <p>Con la App ZanaFit puedes ejercitarte sin la necesidad de moverte de casa y en el horario que estimes conveniente ¡Ponte en forma cuando y donde quieras! Nuestros coaches te dirigirán a través de videos para que logres tus objetivos con sus programas con y sin implementos.</p>
     </div>
@@ -283,16 +290,6 @@
                 // Aquí puedes añadir lógica para enviar el número a un servidor o realizar otras acciones
             } else {
                 alert('Por favor, ingresa un número de teléfono válido.');
-            }
-        }
-
-        // Función para mostrar/ocultar la sección "¿Quiénes somos?"
-        function toggleQuienesSomos() {
-            var quienesSomos = document.getElementById('quienes-somos');
-            if (quienesSomos.style.display === "none" || quienesSomos.style.display === "") {
-                quienesSomos.style.display = "block";
-            } else {
-                quienesSomos.style.display = "none";
             }
         }
     </script>
